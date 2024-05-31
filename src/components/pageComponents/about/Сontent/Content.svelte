@@ -4,7 +4,7 @@
   import { Products } from './products';
   import { Platforms } from './platforms';
   import { History } from './history';
-  // import { Footer } from 'components/organisms/footer';
+  import { Footer } from '@components/organisms';
   import { Calculator } from './calculator';
 </script>
 
@@ -16,4 +16,4 @@
   <Platforms />
   <History />
 </div>
-<!--<Footer />-->
+<Footer />

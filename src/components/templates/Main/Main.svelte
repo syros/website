@@ -1,9 +1,8 @@
 <script>
   import { ContentWrapper } from '../ContentWrapper';
-</script>
-
-<main >
-  <slot name="header">
+  import { fade } from 'svelte/transition';</script>
+<main transition:fade >
+  <slot name="header" >
     Header Slot
   </slot>
   <ContentWrapper className="content">

@@ -1,12 +1,12 @@
 <script lang="ts">
-  import { IconArrowLeft, IconArrowRight } from '@components/ui-kit/Svelte';
+  import { IconArrowLeft, IconArrowRight } from '@components/atoms';
   import './footer.css';
 
   const currentYear = new Date().getFullYear();
-  const currentPage = Astro.url.pathname.split('/')[2];
-  let nextPage;
-  let nextPageLink;
-  let prevPageLink;
+  const currentPage = window.location.pathname.split('/')[2];
+  let nextPage: string;
+  let nextPageLink: string;
+  let prevPageLink: string;
 
   switch (currentPage) {
     case 'users':
