@@ -1,7 +1,9 @@
 <script>
   import { ContentWrapper } from '../ContentWrapper';
-  import { fade } from 'svelte/transition';</script>
-<main transition:fade >
+  import { fade, blur, fly } from 'svelte/transition';
+</script>
+
+<main transition:fade={{delay: 200, duration: 500}} >
   <slot name="header" >
     Header Slot
   </slot>

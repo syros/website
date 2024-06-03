@@ -5,7 +5,7 @@
 </script>
 
 <div class="stream-employee">
-  <img class="avatar" src={`/website/images/employee/${avatar}`} alt={name} />
+  <img class="avatar" src={`/images/employee/${avatar}`} alt={name} />
   <div class="name">{name}</div>
   <div class="role">{role}</div>
 </div>

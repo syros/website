@@ -26,7 +26,7 @@
 <div class="divider">
   <div class="separator" />
 </div>
-<div class="abilities-info">
+<div class="abilities-info" >
   <Info name={activeItem} />
 </div>
 

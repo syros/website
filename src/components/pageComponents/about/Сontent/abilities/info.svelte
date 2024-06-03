@@ -48,7 +48,7 @@
   });
 </script>
 
-<div class="ability-info">
+<div class="ability-info" >
   <svelte:component this={getIcon()} />
   <div class="main-text">{@html TEXT[name].mainText}</div>
   <div class="info-text">{@html TEXT[name].infoText}</div>
