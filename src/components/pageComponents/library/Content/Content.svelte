@@ -1,20 +1,21 @@
 <script>
   import { Info } from './info';
-  import { PaletteBlock } from './palette-block';
-  import { ReleaseBlock } from './release-block';
-  import { AccessibilityBlock } from './accessibility-block';
   import { FontBlock } from './font-block';
+  import { PaletteBlock } from './palette-block';
+  import { IconBlock } from './icon-block';
+  import { AccessibilityBlock } from './accessibility-block';
+  import { ReleaseBlock } from './release-block';
 </script>
 
 <div class="wrapper">
   <Info />
   <FontBlock />
-  <PaletteBlock />
   <AccessibilityBlock />
   <!--
-   <IconsBlock />
    <CustomizingBlock />
    -->
-   <ReleaseBlock />
+  <PaletteBlock />
+  <IconBlock />
+  <ReleaseBlock />
 </div>
 <!--<Footer />-->
