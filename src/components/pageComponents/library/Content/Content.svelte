@@ -2,13 +2,14 @@
   import { Info } from './info';
   import { PaletteBlock } from './palette-block';
   import { ReleaseBlock } from './release-block';
+  import { FontBlock } from './font-block';
 </script>
 
 <div class="wrapper">
   <Info />
+  <FontBlock />
   <PaletteBlock />
   <!--
-   <FontBlock />
    <IconsBlock />
    <AccessibilityBlock />
    <CustomizingBlock />
