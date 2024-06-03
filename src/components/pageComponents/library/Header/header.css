@@ -1,4 +1,4 @@
-.library-header-image {
+:global(.library-header-image) {
   height: 351px;
   flex: 0 0 351px;
 }
