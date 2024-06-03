@@ -8,12 +8,13 @@
 }
 
 .lib-font-block__font-tile {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
     border-radius: 12px;
-    background: var(--Light_blue);
+    background: var(--Light_blue, #f5f9fd);
     padding: 20px;
 }
 

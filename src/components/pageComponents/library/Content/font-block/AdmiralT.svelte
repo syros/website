@@ -2,8 +2,7 @@
   import { onDestroy, onMount } from 'svelte';
   import React from 'react';
   import ReactDOM from 'react-dom';
-  import { WrappedAdmiralT } from './WrappedAdmiralT.tsx?in-svelte';
-
+  import { WrappedAdmiralT } from './WrappedAdmiralT.tsx';
   export let isDarkTheme: boolean;
   let theme: 'dark' | 'light' = isDarkTheme ? 'dark' : 'light';
   export let textType: 'Header' | 'Subtitle' | 'Body' | 'Caption' = 'Header';
