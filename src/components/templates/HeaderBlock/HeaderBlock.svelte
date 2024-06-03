@@ -2,7 +2,7 @@
   // <!--import Contacts from '../Contacts.astro';-->
 </script>
 
-<div  {...$$restProps} class='header'>
+<div {...$$restProps} class='header'>
   <div class="header__content">
 <!--    <Contacts />-->
     <slot />

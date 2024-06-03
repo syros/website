@@ -5,7 +5,7 @@
   import { Divider } from '@components/atoms';
 </script>
 
-<HeaderBlock id={'library'} class="library-header-image" style={{ background: `url(${Cover})` }}>
+<HeaderBlock id={'library'} class="library-header-image" style="background: url({Cover})">
   <Divider />
   <div class="header__wrapper">
     <span class="header-text">
@@ -18,24 +18,5 @@
 
 
 <style>
-  :global(.library-header-image) {
-    height: 352px;
-    flex: 0 0 352px;
-  }
-
-  .header__wrapper {
-    margin-top: 20px;
-  }
-
-  .header-text {
-    color: var(--White, #fff);
-    font-variant-numeric: lining-nums tabular-nums;
-    font-family: 'CoFo Kak';
-    font-size: 60px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: 60px;
-    letter-spacing: -0.1px;
-    text-transform: uppercase;
-  }
+  @import "header.css";
 </style>
