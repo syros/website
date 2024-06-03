@@ -5,17 +5,16 @@
   import { IconBlock } from './icon-block';
   import { AccessibilityBlock } from './accessibility-block';
   import { ReleaseBlock } from './release-block';
+  import { CustomizingBlock } from './customizing-block';
 </script>
 
 <div class="wrapper">
   <Info />
   <FontBlock />
-  <AccessibilityBlock />
-  <!--
-   <CustomizingBlock />
-   -->
   <PaletteBlock />
   <IconBlock />
+  <AccessibilityBlock />
+  <CustomizingBlock />
   <ReleaseBlock />
 </div>
 <!--<Footer />-->
