@@ -1,14 +1,20 @@
 <script lang="ts">
   import { IconArrowLeft, IconArrowRight } from '@components/atoms';
   import './footer.css';
+  import { onMount } from 'svelte';
 
   const currentYear = new Date().getFullYear();
-  const currentPage = window.location.pathname.split('/')[2];
+  let currentPage: string;
+
+  onMount(() => {
+    currentPage = window.location.pathname.split('/')[2];
+  });
+
   let nextPage: string;
   let nextPageLink: string;
   let prevPageLink: string;
 
-  switch (currentPage) {
+  $: switch (currentPage) {
     case 'users':
       nextPage = 'Библиотека';
       nextPageLink = '/website/library/#library';

@@ -4,8 +4,8 @@
 </script>
 
 <div class="users-list">
-    {#each users as user}
-        <UserCard index={user.id} {...user} />
+    {#each users as user, index}
+        <UserCard {index} {...user} />
     {/each}
 </div>
 

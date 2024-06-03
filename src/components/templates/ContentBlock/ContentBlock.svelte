@@ -6,7 +6,7 @@
 
 <div class='block-container'>
   {#if (title || id)}
-    <h2 class="block-title ${titleTheme}" {id}>{title}</h2>
+    <h2 class="block-title {titleTheme}" {id}>{title}</h2>
   {/if}
   <slot />
 </div>

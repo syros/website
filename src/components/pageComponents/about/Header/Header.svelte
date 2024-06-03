@@ -27,5 +27,5 @@
 </HeaderBlock>
 
 <style>
-  @import "header.css";
+  @import 'header.css';
 </style>

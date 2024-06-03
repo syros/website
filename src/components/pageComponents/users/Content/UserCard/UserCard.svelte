@@ -2,7 +2,7 @@
     export let index, id, groupName, title, info;
 </script>
 
-<div class="user-card" id={id}>
+<div class="user-card" {id}>
     <div class="user-card__first-row">
       {`${index + 1} ${groupName}`}
     </div>

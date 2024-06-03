@@ -1,8 +1,14 @@
 <script lang="ts">
   // <!--import Contacts from '../Contacts.astro';-->
+  const classes: Array<string> = ['header']
+  if ($$props.class) {
+    classes.push($$props.class);
+  }
+
+  const className = classes.join(' ')
 </script>
 
-<div  {...$$restProps} class='header'>
+<div  {...$$restProps} class={className}>
   <div class="header__content">
 <!--    <Contacts />-->
     <slot />
