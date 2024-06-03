@@ -45,6 +45,7 @@
 }
 
 .subcontent-block__last-column {
+    box-sizing: border-box;
     display: flex;
     margin-left: 10px;
     padding-top: 20px;
