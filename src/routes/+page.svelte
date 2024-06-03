@@ -4,6 +4,6 @@
 </script>
 
 <Main>
-  <Header slot="header"/>
+  <Header slot="header" />
   <Content slot="content" />
 </Main>
