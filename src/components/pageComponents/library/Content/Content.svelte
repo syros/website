@@ -1,12 +1,14 @@
 <script>
-  import { Info} from '@components/pageComponents/library/Content/info';
+  import { Info } from './info';
+  import { PaletteBlock } from './palette-block';
 </script>
 
 <div class="wrapper">
   <Info />
-  <!--<FontBlock client:idle />
-   <PaletteBlock client:idle />
-   <IconsBlock client:idle />
+  <PaletteBlock />
+  <!--
+   <FontBlock />
+   <IconsBlock />
    <AccessibilityBlock />
    <CustomizingBlock />
    <ReleasesBlock />-->
