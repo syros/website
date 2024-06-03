@@ -2,6 +2,7 @@
   import { Info } from './info';
   import { PaletteBlock } from './palette-block';
   import { ReleaseBlock } from './release-block';
+  import { AccessibilityBlock } from './accessibility-block';
   import { FontBlock } from './font-block';
 </script>
 
@@ -9,9 +10,9 @@
   <Info />
   <FontBlock />
   <PaletteBlock />
+  <AccessibilityBlock />
   <!--
    <IconsBlock />
-   <AccessibilityBlock />
    <CustomizingBlock />
    -->
    <ReleaseBlock />
