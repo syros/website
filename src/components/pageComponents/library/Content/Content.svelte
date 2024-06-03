@@ -1,6 +1,7 @@
 <script>
   import { Info } from './info';
   import { PaletteBlock } from './palette-block';
+  import { ReleaseBlock } from './release-block';
 </script>
 
 <div class="wrapper">
@@ -11,6 +12,7 @@
    <IconsBlock />
    <AccessibilityBlock />
    <CustomizingBlock />
-   <ReleasesBlock />-->
+   -->
+   <ReleaseBlock />
 </div>
 <!--<Footer />-->
