@@ -1,8 +1,19 @@
-<script>
+<script lang="ts">
   import { ContentBlock } from '@components/templates';
   import './accessibilityBlock.css';
   import accessibilityList from './accessibility-list.json';
-  /*import { Icon } from 'astro-icon/components';*/
+  import Eye from './eye.svg';
+  import Scan from './scan.svg';
+  import Shield from './shield.svg';
+
+  const getComponent = (name: string) => {
+    switch (name) {
+      case 'eye': return Eye;
+      case 'scan': return Scan;
+      case 'shield': return Shield;
+    }
+  }
+
 </script>
 
 <ContentBlock id="accessibility" title="Доступность">
@@ -14,9 +25,9 @@
   <div class="accessibility__descr-wrapper">
     {#each accessibilityList as item}
       <div class="accessibility__descr-container">
-        <!--<div class="accessibility__icon-wrapper">
-          <Icon name={item.icon} />
-        </div>-->
+        <div class="accessibility__icon-wrapper">
+          <svelte:component this={getComponent(item.icon)} />
+        </div>
         <div class="accessibility__header">{item.title}</div>
         <div class="accessibility__description">{item.description}</div>
       </div>
