@@ -55,7 +55,5 @@ function rgbToHex(r: number, g: number, b: number) {
 
 export function hsvToHex({ h, s, v }: { h: number; s: number; v: number }) {
   const rgb = hsvToRgb(h / 360, s / 100, v / 100);
-  console.log('hsvToRgb');
-  console.log(rgb);
   return rgbToHex(rgb.r, rgb.g, rgb.b);
 }

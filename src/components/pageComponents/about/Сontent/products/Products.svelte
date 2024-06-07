@@ -1,19 +1,20 @@
 <script lang="ts">
   import { ContentBlock } from '@components/templates';
-  import ProductsSwitcher from './ProductsSwitcher.svelte';
+  import ProductsBlock from './ProductsBlock.svelte';
 
-  const NamesArray = {
-    site: 'Платформа производства «Сфера»',
-    web: 'Адаптивный веб и мобильная версия',
-    style: 'Геометрический стиль',
-  } as const;
+  const products = [
+    {
+      title: 'Платформа производства «Сфера»',
+      link: 'https://www.sferaplatform.ru/sfera-metodologiya',
+      imgLight: 'images/sfera-light.png',
+      imgDark: 'images/sfera-dark.png',
+      description: ['Адаптивный веб и мобильная версия', 'Геометрический стиль'],
+    },
+  ] as const;
 </script>
 
 <ContentBlock id="products" title="наши продукты">
-  <div class="products-text">
-    Ниже приведены несколько примеров проектов, в которых используется дизайн-система Адмирал
-  </div>
-  <ProductsSwitcher items={NamesArray} activeItem="site" />
+  <ProductsBlock products={products} />
 </ContentBlock>
 
 <style>

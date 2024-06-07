@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Moon from './moon.svelte';
+  import Moon from './moon.svg';
   import { Toggle } from '@components/atoms';
 
   export let checked = false;
@@ -13,9 +13,7 @@
 
 <style>
   .toggle-wrapper {
-    position: absolute;
-    right: 0;
-    top: 103px;
+    margin-top: 25px;
     display: flex;
     column-gap: 10px;
     align-items: center;

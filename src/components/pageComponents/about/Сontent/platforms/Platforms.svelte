@@ -12,7 +12,12 @@
         Дизайн-система является комплексным решением для создания пользовательского интерфейса. Она включает в себя
         работу с контентом, аналитику и настройки, которые могут быть использованы для любого устройства или продукта
       </div>
-      <Button variant="ghost" class="bottom-button" id="platform-email-button" on:click={() => window.open('mailto:Admiral@inno.tech')}>Хочу попробовать</Button>
+      <Button
+        variant="ghost"
+        class="bottom-button"
+        id="platform-email-button"
+        on:click={() => window.open('mailto:Admiral@inno.tech')}>Хочу попробовать</Button
+      >
     </div>
     <img class="platforms-cover" src={Cover} alt="cover" />
   </div>
@@ -33,8 +38,8 @@
     box-sizing: border-box;
   }
 
-  .platforms-container .content {
-    margin-top: 10px;
+  .content {
+    margin-top: 20px;
     max-width: 50%;
     color: var(--White, #fff);
     font-variant-numeric: lining-nums tabular-nums;
@@ -56,15 +61,9 @@
     object-fit: cover;
   }
 
-  .bottom-button {
+  :global(.platforms-container .bottom-button) {
     bottom: 20px;
     left: 20px;
     position: absolute;
   }
 </style>
-
-<!--<script>-->
-<!--  const button = document.getElementById('platform-email-button');-->
-
-<!--  button.addEventListener('click', () => window.open('mailto:Admiral@inno.tech'));-->
-<!--</script>-->

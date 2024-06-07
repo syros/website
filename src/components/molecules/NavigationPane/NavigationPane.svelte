@@ -1,10 +1,9 @@
 <script lang="ts">
-  // import Logo from './admiral.svelte';
   import Logo from './admiral.svg';
   import { onMount } from 'svelte';
   import { NavigationMenu, type NavigationItem } from '@components/molecules';
   import { joinAbsoluteUrlPath } from '@components/tools';
-  import { type Page, pageInfo, setCurrentPage, setPreviousPage } from '@store/page';
+  import { type Page } from '@store/page';
   import { goto } from '$app/navigation';
 
   export let items: Array<NavigationItem>;
@@ -33,36 +32,27 @@
   $: {
     if (prevActive !== active) {
       prevActive = active;
+      opened = new Array<string>(1).fill(active);
     }
   }
 
   onMount(() => {
-    const page = getPageRoot(window.location.pathname)
-    // console.log('PANE:', `previous page ${$pageInfo.previous}`);
-    // console.log('PANE:', `current page ${$pageInfo.current}`);
+    const page = getPageRoot(window.location.pathname);
 
     opened = new Array<string>(1).fill(page);
     active = page;
-
-    // if ($pageInfo.previous && $pageInfo.current && $pageInfo.previous !== $pageInfo.current) {
-    //   opened = new Array<string>(1).fill(getPageRoot($pageInfo.previous));
-    //   setTimeout(() => {
-    //     opened = new Array<string>(1).fill(getPageRoot($pageInfo.current as Page));
-    //   });
-    // }
   });
 
   const BASE_URL = import.meta.env.BASE_URL;
 
   const onItemClick = (key: string, item: NavigationItem) => {
-    const newPage = item.page;
+    const newPage = getPageRoot(`/${item.href}`);
     const basePath = joinAbsoluteUrlPath(window.location.origin, BASE_URL);
 
-    console.log(newPage);
-    // if ($pageInfo.current !== newPage) {
-    //   setPreviousPage($pageInfo.current as Page);
-    //   setCurrentPage(newPage as Page);
-    // }
+    if (active !== newPage) {
+      active = newPage;
+      opened = new Array<string>(1).fill(newPage);
+    }
 
     const url = new URL(basePath + '/' + item.href);
     if (item.anchor) url.hash = item.anchor;
@@ -73,7 +63,7 @@
 <nav class="side-nav">
   <NavigationMenu {items} bind:active {opened} {onItemClick}>
     <a href={BASE_URL} slot="logo">
-      <Logo />
+      <Logo fill="var(--Dark_grey, rgb(53, 56, 58))" />
     </a>
   </NavigationMenu>
 </nav>

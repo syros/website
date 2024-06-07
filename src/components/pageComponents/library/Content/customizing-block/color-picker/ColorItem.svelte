@@ -5,7 +5,7 @@
   function getColorValue(colorName: string) {
     switch (colorName) {
       case 'custom':
-        return 'no-repeat center url("@components/pageComponents/library/Content/color-picker/rainbow.svg")';
+        return 'no-repeat center url("images/rainbow.svg")';
       case 'yellow':
         return '#FFC400';
       case 'orange':

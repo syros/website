@@ -1,6 +1,7 @@
 <script lang="ts">
   import { type NavigationItem, NavigationPane } from '@components/molecules';
-  import { fade } from 'svelte/transition';
+  import { fade, blur } from 'svelte/transition';
+  import { cubicIn, cubicOut } from 'svelte/easing';
 
   export let data;
 
@@ -93,8 +94,11 @@
 </script>
 
 <NavigationPane items={navItems} />
-{#key data.pathname}
-  <div class="main-container" in:fade={{ duration: 300, delay: 400 }} out:fade={{ duration: 300 }}>
-    <slot />
+
+  <div class="main-container-wrapper" >
+    {#key data.pathname}
+    <div class="main-container" in:fade={{ easing: cubicOut, duration: 300, delay: 400 }} out:fade={{ easing: cubicIn, duration: 300 }}>
+      <slot />
+    </div>
+    {/key}
   </div>
-{/key}

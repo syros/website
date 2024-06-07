@@ -67,6 +67,8 @@
   import WifiOutline from '@admiral-ds/icons/build/communication/WifiOutline.svg';
   import WifiSolid from '@admiral-ds/icons/build/communication/WifiSolid.svg';
 
+  import { fade } from 'svelte/transition';
+
   let scrollingContainer: HTMLDivElement;
   let left: number = 0;
   let step = 67 * 4;
@@ -209,8 +211,9 @@
       >
         {#each iconsArray as { name, icon }}
           <div class="icons-block__icon-container">
-            <div class="icons-block__icon-wrapper">
-              <svelte:component this={icon}></svelte:component>
+<!--            todo: Вынести в отдельный компонент для transition -->
+            <div class="icons-block__icon-wrapper" transition:fade={{duration: 3000}}>
+              <svelte:component this={icon} class="icons-block__icon"></svelte:component>
             </div>
             {name}
           </div>

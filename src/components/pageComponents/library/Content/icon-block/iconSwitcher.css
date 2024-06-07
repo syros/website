@@ -77,3 +77,7 @@
     width: 24px;
     height: 24px;
 }
+
+:global(.icons-block__icon g path) {
+    fill: #0d42ff !important;
+}

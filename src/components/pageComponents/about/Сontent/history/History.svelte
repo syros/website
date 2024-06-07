@@ -1,9 +1,9 @@
 <script lang="ts">
   import history from './history.json';
   import { ScrollableTimeline } from '@components/organisms';
+  import { ContentBlock } from '@components/templates';
 </script>
 
-<div class="block-container">
-  <h2 class="block-title dark">история развития</h2>
+<ContentBlock title="история развития">
   <ScrollableTimeline items={history} />
-</div>
+</ContentBlock>

@@ -1,6 +1,6 @@
 <script lang="ts">
   import { EmployeeSlider, PriceSlider, ProductSlider } from './NamedSlider';
-  // import { Toggle } from '@components/ui-kit/Svelte';
+  import { Toggle } from '@components/atoms';
   import Arrow from './Arrow.svelte';
   import { ContentBlock } from '@components/templates';
 
@@ -18,7 +18,7 @@
       <ProductSlider />
       <div class="calculator-multichannel-switcher">
         Вывод продукта сразу в несколько каналов
-  <!--      <Toggle />-->
+        <Toggle />
       </div>
     </div>
     <div class="divider">

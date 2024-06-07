@@ -3,6 +3,9 @@
   import Cover from './image.png';
   import { Divider } from '@components/atoms';
   import Card from './Card.svelte';
+  import Arrow from './arrow.svg';
+  import Square from './square.svg';
+  import Eye from './eye.svg';
 </script>
 
 <HeaderBlock id="ds-info" class="about-header">
@@ -18,11 +21,11 @@
   </span>
   <Divider />
   <div class="cards-wrapper">
-    <Card text="Ускоряет проектирование продуктов и упрощает разработку" />
+    <Card text="Ускоряет проектирование продуктов и упрощает разработку" icon={Arrow}/>
     <div class="vertical-divider"></div>
-    <Card text="Создаёт консистентный пользовательский опыт цифровых продуктов" />
+    <Card text="Создаёт консистентный пользовательский опыт цифровых продуктов" icon={Square}/>
     <div class="vertical-divider"></div>
-    <Card text="Стандарты, которые задают высокую планку дизайна и разработки интерфейсов" />
+    <Card text="Стандарты, которые задают высокую планку дизайна и разработки интерфейсов" icon={Eye}/>
   </div>
 </HeaderBlock>
 

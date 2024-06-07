@@ -8,7 +8,7 @@
 
 <div class="header__card">
   {#if icon}
-    <svelte:element this={icon} />
+    <svelte:component this={icon} />
   {/if}
   <span class="card-text">{text}</span>
 </div>

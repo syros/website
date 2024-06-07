@@ -10,9 +10,6 @@
 </ContentBlock>
 
 <style>
-  .abilities-block {
-    padding-top: 6px;
-  }
   .abilities-container {
     display: flex;
     column-gap: 10px;

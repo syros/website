@@ -1,6 +1,6 @@
 <script lang="ts">
-  // import { get_current_component } from 'svelte/internal';
-  // import { createEventForwarder } from '../createEventForwarder.ts';
+  import { get_current_component } from 'svelte/internal';
+  import { createEventForwarder } from '@components/tools';
 
   /** @restProps {button | a} */
   /** Specifies the visual styling of the button. */
@@ -16,11 +16,12 @@
   /** Obtains a bound DOM reference to the button. */
   export let element: HTMLElement = null;
 
-  // const forwardEvents = createEventForwarder(get_current_component());
+  const forwardEvents = createEventForwarder(get_current_component());
 </script>
 
 <button
   bind:this={element}
+  use:forwardEvents
   role="button"
   class="button style-{variant} {className}"
   class:disabled
