@@ -32,7 +32,7 @@
   ];
 </script>
 
-<SubcontentBlock heading={'Палитра'}>
+<SubcontentBlock heading={'Палитра'} id="palette">
   <svelte:fragment slot="description">
     Для настройки цветовой палитры дизайн-системы Aдмирал используются токены. Это позволяет изменять цвета элементов в
     зависимости от требований продукта
