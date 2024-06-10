@@ -81,6 +81,8 @@
     setTimeout(() => {
       animated = true;
     });
+
+    console.log(menuItems);
   });
 </script>
 

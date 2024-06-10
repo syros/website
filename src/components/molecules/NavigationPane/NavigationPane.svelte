@@ -30,17 +30,22 @@
   };
 
   $: {
+    console.log(active);
     if (prevActive !== active) {
       prevActive = active;
-      opened = new Array<string>(1).fill(active);
+    }
+
+    if (previousPage !== currentPage) {
+      previousPage = currentPage;
+      opened = new Array<string>(1).fill(currentPage);
     }
   }
 
   onMount(() => {
     const page = getPageRoot(window.location.pathname);
 
-    opened = new Array<string>(1).fill(page);
     active = page;
+    currentPage = page;
   });
 
   const BASE_URL = import.meta.env.BASE_URL;
@@ -49,10 +54,12 @@
     const newPage = getPageRoot(`/${item.href}`);
     const basePath = joinAbsoluteUrlPath(window.location.origin, BASE_URL);
 
-    if (active !== newPage) {
-      active = newPage;
-      opened = new Array<string>(1).fill(newPage);
+    const newActive = `${item.href ? item.href + '/' : ''}#${item.anchor}`;
+    if (active !== newActive) {
+      active = newActive;
     }
+
+    currentPage = newPage;
 
     const url = new URL(basePath + '/' + item.href);
     if (item.anchor) url.hash = item.anchor;

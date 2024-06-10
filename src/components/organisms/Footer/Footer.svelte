@@ -8,6 +8,7 @@
 
   onMount(() => {
     currentPage = window.location.pathname.split('/')[2];
+    console.log(window.location);
   });
 
   let nextPage: string;
