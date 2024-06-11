@@ -4,6 +4,7 @@
   import Accessability from './icons/accessability.svelte';
   import Global from './icons/global.svelte';
   import Mobile from './icons/mobile.svelte';
+  import { fly } from 'svelte/transition';
   // import text from './text.json';
 
   export let name: string;
@@ -48,11 +49,14 @@
   });
 </script>
 
-<div class="ability-info" >
-  <svelte:component this={getIcon()} />
-  <div class="main-text">{@html TEXT[name].mainText}</div>
-  <div class="info-text">{@html TEXT[name].infoText}</div>
-</div>
+{#key name}
+  <div class="ability-info" in:fly={{ x: 100, duration: 400, delay: 150 }}
+  out:fly={{ x: 0, duration: 0 }}>
+    <svelte:component this={getIcon()} />
+    <div class="main-text">{@html TEXT[name].mainText}</div>
+    <div class="info-text">{@html TEXT[name].infoText}</div>
+  </div>
+  {/key}
 
 <style>
     .ability-info {
