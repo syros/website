@@ -4,7 +4,7 @@
   import { NavigationMenu, type NavigationItem } from '@components/molecules';
   import { joinAbsoluteUrlPath } from '@components/tools';
   import { type Page } from '@store/page';
-  import { goto } from '$app/navigation';
+  import { goto, afterNavigate } from '$app/navigation';
 
   export let items: Array<NavigationItem>;
   export let active: string | undefined;
@@ -30,7 +30,13 @@
   };
 
   $: {
-    console.log(active);
+    afterNavigate(() => {
+      const page = getPageRoot(window.location.pathname);
+
+      active = page;
+      currentPage = page;
+    });
+    
     if (prevActive !== active) {
       prevActive = active;
     }
